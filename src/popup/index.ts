@@ -49,8 +49,34 @@ function setupTabs(): void {
   });
 }
 
+function getElement<T extends Element>(id: string, type: { new (): T }): T {
+  const element = document.getElementById(id);
+  if (!(element instanceof type)) {
+    throw new Error(`Missing element: ${id}`);
+  }
+
+  return element;
+}
+
+function setupViews(): void {
+  const mainView = getElement("main-view", HTMLElement);
+  const linksView = getElement("links-view", HTMLElement);
+  const openButton = getElement("open-links-view", HTMLButtonElement);
+  const closeButton = getElement("close-links-view", HTMLButtonElement);
+
+  const showView = (view: "main" | "links") => {
+    const showMain = view === "main";
+    mainView.classList.toggle("active", showMain);
+    linksView.classList.toggle("active", !showMain);
+  };
+
+  openButton.addEventListener("click", () => showView("links"));
+  closeButton.addEventListener("click", () => showView("main"));
+}
+
 async function main(): Promise<void> {
   setupTabs();
+  setupViews();
   let settings = await getSettings();
   render(settings);
 

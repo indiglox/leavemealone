@@ -46,13 +46,6 @@ async function bundle() {
   await cp(path.join(__dirname, "src", "popup", "popup.html"), path.join(outdir, "popup.html"));
   await cp(path.join(__dirname, "src", "popup", "styles.css"), path.join(outdir, "styles.css"));
   await cp(path.join(__dirname, "assets", "icons"), path.join(outdir, "icons"), { recursive: true });
-  await mkdir(path.join(outdir, "docs"), { recursive: true });
-  await cp(path.join(__dirname, "docs", "README.md"), path.join(outdir, "docs", "README.md"));
-  await cp(
-    path.join(__dirname, "docs", "privacy-policy.md"),
-    path.join(outdir, "docs", "privacy-policy.md")
-  );
-  await cp(path.join(__dirname, "docs", "support.md"), path.join(outdir, "docs", "support.md"));
 }
 
 bundle().catch((error) => {

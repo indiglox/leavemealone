@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "description": "Chrome-first browser extension that hides Facebook reels, video surfaces, stories, and YouTube Shorts.",
+  "homepage": "https://github.com/indiglox/leavemealone",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indiglox/leavemealone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/indiglox/leavemealone/issues"
+  },
   "scripts": {
     "build": "node esbuild.config.mjs chrome",
     "build:chrome": "node esbuild.config.mjs chrome",
