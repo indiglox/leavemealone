@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Leave Me Alone",
+  "version": "1.0.0",
+  "description": "Hide Facebook reels, video surfaces, stories, and YouTube Shorts.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.facebook.com/*", "*://*.youtube.com/*"],
+  "action": {
+    "default_title": "Leave Me Alone",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "leavemealone@example.com",
+      "strict_min_version": "128.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*", "*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

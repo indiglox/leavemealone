@@ -1,0 +1,25 @@
+{
+  "name": "leavemealone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome-first browser extension that hides Facebook reels, video surfaces, stories, and YouTube Shorts.",
+  "scripts": {
+    "build": "node esbuild.config.mjs chrome",
+    "build:chrome": "node esbuild.config.mjs chrome",
+    "build:chrome:release": "node esbuild.config.mjs chrome --release",
+    "build:firefox": "node esbuild.config.mjs firefox",
+    "release:chrome": "node scripts/release-chrome.mjs",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/webextension-polyfill": "^0.12.3",
+    "esbuild": "^0.27.0",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "webextension-polyfill": "^0.12.0"
+  }
+}
