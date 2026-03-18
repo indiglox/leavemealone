@@ -2,6 +2,8 @@
 
 Leave Me Alone is an open-source browser extension that helps reduce doomscrolling by hiding high-distraction surfaces on Facebook and YouTube.
 
+<img width="435" height="503" alt="Screenshot 2026-03-18 at 3 04 44 PM" src="https://github.com/user-attachments/assets/56387f35-8db4-4c27-bc8b-d9cfc69624c5" />
+
 It currently supports:
 
 - Facebook Reels
