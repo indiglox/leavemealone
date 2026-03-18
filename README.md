@@ -46,7 +46,6 @@ Useful commands:
 
 - `npm run build:chrome` builds the Chrome extension into `dist/chrome`
 - `npm run build:firefox` builds the Firefox-ready package into `dist/firefox`
-- `npm run release:chrome` creates a clean Chrome zip in `artifacts/`
 - `npm test` runs the test suite
 - `npx tsc --noEmit` runs type-checking
 
@@ -56,12 +55,6 @@ Project areas:
 - content blocking logic: [`src/content/`](/Users/jayson/Documents/projects/leavemealone/src/content)
 - shared settings/storage helpers: [`src/shared/`](/Users/jayson/Documents/projects/leavemealone/src/shared)
 - docs: [`docs/`](/Users/jayson/Documents/projects/leavemealone/docs)
-
-## Notes
-
-- Facebook and YouTube change their DOM often, so selectors may need occasional updates.
-- Facebook behavior can vary by account, region, and experiment bucket.
-- If something looks wrong, try reloading the extension and refreshing the page first.
 
 ## Privacy
 
