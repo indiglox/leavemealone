@@ -1,51 +1,43 @@
 # Leave Me Alone
 
-Chrome-first browser extension that hides:
+Leave Me Alone is a Chrome-first browser extension that cuts down doomscroll bait on:
 
 - Facebook Reels
 - Facebook video surfaces
 - Facebook Stories
 - YouTube Shorts
 
-## Chrome Web Store Readiness
+The codebase is set up for Chrome first, with a Firefox build path kept ready in parallel.
 
-This repo includes the materials needed to prepare a public Chrome Web Store submission for `Leave Me Alone`:
+## Development
 
-- a Chrome release zip flow
-- GitHub-friendly markdown privacy and support docs in [`docs/`](/Users/jayson/Documents/projects/leavemealone/docs)
-- Chrome Web Store listing copy and reviewer notes in [`docs/chrome-web-store/`](/Users/jayson/Documents/projects/leavemealone/docs/chrome-web-store)
-- square extension icons in [`assets/icons/`](/Users/jayson/Documents/projects/leavemealone/assets/icons)
-
-## Scripts
-
-- `npm run build` builds the Chrome extension into `dist/chrome`
-- `npm run build:chrome:release` builds a Chrome-ready runtime package without source maps
-- `npm run build:firefox` builds the Firefox-ready package into `dist/firefox`
-- `npm run release:chrome` creates a submission zip in `artifacts/`
-- `npm test` runs the unit and DOM tests
-
-## Load In Chrome
+Install dependencies and build the unpacked Chrome extension:
 
 1. Run `npm install`
-2. Run `npm run build`
+2. Run `npm run build:chrome`
 3. Open `chrome://extensions`
 4. Enable Developer mode
-5. Load unpacked from `dist/chrome`
+5. Load unpacked from [`dist/chrome`](/Users/jayson/Documents/projects/leavemealone/dist/chrome)
 
-## Release For Chrome Web Store
+Useful commands:
 
-1. Run `npm run release:chrome`
-2. Upload the generated zip from [`artifacts/`](/Users/jayson/Documents/projects/leavemealone/artifacts)
-3. Use the listing copy, privacy notes, and reviewer instructions from [`docs/chrome-web-store/`](/Users/jayson/Documents/projects/leavemealone/docs/chrome-web-store)
-4. After the repo is public, use the GitHub URLs for [`docs/privacy-policy.md`](/Users/jayson/Documents/projects/leavemealone/docs/privacy-policy.md) and [`docs/support.md`](/Users/jayson/Documents/projects/leavemealone/docs/support.md) in the store dashboard
+- `npm run build:chrome` builds the Chrome extension into `dist/chrome`
+- `npm run build:firefox` builds the Firefox-ready package into `dist/firefox`
+- `npm run release:chrome` creates the Chrome Web Store upload zip in `artifacts/`
+- `npm test` runs the test suite
+- `npx tsc --noEmit` runs type-checking
 
-## Submission Checklist
+## Store Submission
 
-- Run `npm test`
-- Run `npx tsc --noEmit`
-- Run `npm run release:chrome`
-- Verify the popup loads with working icons and no broken assets
-- Verify Facebook toggles off means no Facebook blocking activity
-- Verify Facebook Stories collapses compactly when enabled
-- Verify YouTube Shorts hiding still works on Home, Search, and Watch surfaces
-- Fill out store listing, privacy fields, distribution, and reviewer notes using the docs in [`docs/chrome-web-store/`](/Users/jayson/Documents/projects/leavemealone/docs/chrome-web-store)
+Chrome Web Store materials live here:
+
+- public docs: [`docs/`](/Users/jayson/Documents/projects/leavemealone/docs)
+- listing copy and reviewer notes: [`docs/chrome-web-store/`](/Users/jayson/Documents/projects/leavemealone/docs/chrome-web-store)
+- store and extension icons: [`assets/`](/Users/jayson/Documents/projects/leavemealone/assets)
+
+To prepare a release:
+
+1. Run `npm test`
+2. Run `npx tsc --noEmit`
+3. Run `npm run release:chrome`
+4. Upload the zip from [`artifacts/`](/Users/jayson/Documents/projects/leavemealone/artifacts)
