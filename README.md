@@ -36,7 +36,7 @@ Your settings are stored locally in the browser so the extension remembers your 
 3. Open `chrome://extensions`
 4. Turn on `Developer mode`
 5. Click `Load unpacked`
-6. Select [`dist/chrome`](/Users/jayson/Documents/projects/leavemealone/dist/chrome)
+6. Select `dist/chrome`
 
 After loading it, open Facebook or YouTube and use the popup to choose what you want hidden.
 
@@ -51,10 +51,10 @@ Useful commands:
 
 Project areas:
 
-- popup UI: [`src/popup/`](/Users/jayson/Documents/projects/leavemealone/src/popup)
-- content blocking logic: [`src/content/`](/Users/jayson/Documents/projects/leavemealone/src/content)
-- shared settings/storage helpers: [`src/shared/`](/Users/jayson/Documents/projects/leavemealone/src/shared)
-- docs: [`docs/`](/Users/jayson/Documents/projects/leavemealone/docs)
+- popup UI: [`src/popup/`](./src/popup)
+- content blocking logic: [`src/content/`](./src/content)
+- shared settings/storage helpers: [`src/shared/`](./src/shared)
+- docs: [`docs/`](./docs)
 
 ## Privacy
 
@@ -62,5 +62,5 @@ Leave Me Alone does not require an account and does not send your settings to a 
 
 See:
 
-- [Privacy policy](/Users/jayson/Documents/projects/leavemealone/docs/privacy-policy.md)
-- [Support](/Users/jayson/Documents/projects/leavemealone/docs/support.md)
+- [Privacy policy](./docs/privacy-policy.md)
+- [Support](./docs/support.md)

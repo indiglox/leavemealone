@@ -10,8 +10,8 @@ The extension currently targets Facebook Reels, Facebook video surfaces, Faceboo
 
 ## Reporting an issue
 
-Open an issue in the project repository or use the publisher support contact listed on the Chrome Web Store item.
+Open an issue in the project repository with the page URL, enabled toggles, and a screenshot when possible.
 
-## Reviewer note
+## Note
 
 Some Facebook-specific surfaces depend on the current logged-in Facebook experience and may vary by account, region, or experiment bucket.
